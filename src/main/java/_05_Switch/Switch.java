@@ -59,7 +59,7 @@ public class Switch {
             case "BRONZE":
             case "NORMAL":
                 prize = 2000;
-                break;
+
 
             //BRONZE && NORMAL (X)
             //case문은 연산이 올 수 없다 값만 올 수 있다
@@ -111,5 +111,4 @@ public class Switch {
 
 
     }
-}
 }
