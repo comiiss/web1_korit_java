@@ -32,11 +32,11 @@ public class MultiArray {
         System.out.println(seats2[0][3]);
         System.out.println(seats2[2][4]);
 
-       String change = "B-THREE";
-       seats2[1][2] = change;
-       System.out.println(seats2[1][2]);
+        String change = "B-THREE";
+        seats2[1][2] = change;
+        System.out.println(seats2[1][2]);
 
-       //Arrays.toString()은 주소가 있으면, 한 번만 찾아가서 확인
+        //Arrays.toString()은 주소가 있으면, 한 번만 찾아가서 확인
 
         System.out.println(Arrays.toString(seats2));
         //Arrays.toString은 주소로 찾아가서 주소들만 보여 준다
@@ -44,5 +44,66 @@ public class MultiArray {
         //실제 값이 나올 때까지 찾아가서 확인해 온다
         System.out.println(Arrays.deepToString(seats2));
 
-    }
+        //이중 배열과 for문
+        //int[] - for문 한 번으로 int
+        //int[][] - for문 한 번으로 int[]
+
+        //String[][] - String[] - String
+        for (int i = 0; i < seats2.length; i++) {
+            String[] seat = seats2[i];
+            System.out.println("=======================");
+            System.out.println(Arrays.toString(seat));
+            System.out.println("=======================");
+            for (int j = 0; j < seat.length; j++) {
+                String seatName = seat[j];
+                System.out.println(seatName);
+            }
+        }
+
+        for (int i = 0; i < seats2.length; i++) {
+            for (int j = 0; j < seats2[i].length; j++) {
+                System.out.println(seats2[i][j]);
+            }
+        }
+
+        int[][] numArrs = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        //numArrs 내부에 실제 int들을 읽으면서
+        //1. 짝수 합을 구해 주세요
+        //2. 3의 배수의 갯수를 구해 주세요
+
+        int evenSum = 0;
+
+        for (int i = 0; i < numArrs.length; i++) {
+            int[] numArr = numArrs[i];
+            for (int j = 0; j < numArr.length; j++) {
+                int num = numArr[j];
+                if (num % 2 == 0) {
+                    evenSum += num;
+                    System.out.println("=====");
+                    System.out.println(evenSum);
+                }
+            }
+
+        }
+        int count = 0;
+        //향상된 for문
+        for (int[] numArr : numArrs) {
+            for (int num : numArr) {
+                if(num % 3 == 0) {
+                    count++;
+                }
+
+            }
+
 }
+    }
+            }
+
+
+
+
