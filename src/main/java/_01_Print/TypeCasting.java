@@ -34,5 +34,11 @@ public class TypeCasting {
         double d = Double.parseDouble("12");
 
 
+        int intNum3 = 129;
+        byte byteNum2 = (byte)intNum3;
+        short shortNum2 = (short)intNum3;
+
+
+
     }
 }
