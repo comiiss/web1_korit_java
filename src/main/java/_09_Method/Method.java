@@ -16,6 +16,8 @@ public class Method {
 
     }
 
+
+
     //매개 변수: 코드를 재사용할 때, 외부로부터 전달 받을 데이터
     //메서드 이름(String name1, String name2...)
 
@@ -33,6 +35,7 @@ public class Method {
         System.out.println(num + num2);
 
     }
+
 
     public static void score(int score1, int score2, int score3) {
         int sum = score1 + score2 + score3;
@@ -74,6 +77,8 @@ public class Method {
         System.out.println(nums[0]);
         //heap 메모리의 특징
         //모든 stack 공간은 주소만 알면 heap에 접근할 수 있다
+
+
 
     }
 }

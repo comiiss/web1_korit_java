@@ -23,14 +23,12 @@ public class ScannerStudy {
         System.out.println("나이를 입력하세요:");
         int age = scanner.nextInt();
         System.out.println("나이: " + age);
-        scanner.nextLine(); //(참고) 입력 버퍼에 남아 있는 엔터키 제거 용도
+       scanner.nextLine(); //(참고) 입력 버퍼에 남아 있는 엔터키 제거 용도
 
 
         System.out.print("주소를 입력하세요: ");
         String address = scanner.nextLine();
         System.out.println("주소: " + address);
-
-
 
 
 

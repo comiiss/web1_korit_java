@@ -49,16 +49,22 @@ public class Op1 {
 
         //단항연산자 - 피연산자가 두 개면 이항연산자라고 한다?
 
+
+        System.out.println("--------");
+
         int a = 1;
 
         //후위 증감
         int b = a++;
         System.out.println(b);
 
+
         a = 1;
         //전위 증감
         b = ++a;
         System.out.println(b);
+
+        System.out.println("--------");
 
         a = 1;
 
@@ -67,6 +73,7 @@ public class Op1 {
         System.out.println(b); //1
 
         a = 1;
+
 
         //전위 감소
         b = --a;

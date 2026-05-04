@@ -29,7 +29,7 @@ public class Op2 {
         int y = 10;
 
         int max = x > y ? x : y;
-        System.out.println(max);
+        System.out.println("max: " + max);
 
         // ? 이후의 데이터 타입이 동일해야 한다
         boolean isSame = x == y ? true : false;
@@ -76,7 +76,11 @@ public class Op2 {
         int fam = 4;
 
         boolean IsRight = IsFamily && fam == 4;
+
+
     }
+
+
 
 
 }

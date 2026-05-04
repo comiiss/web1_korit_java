@@ -50,5 +50,8 @@ public class Practice {
         printStudentInfo("홍길동", scores);
         //학생 이름, 국, 영, 수 점수를 배열로 매개 변수로 넘기면
         //총점, 평균, 등급을 출력하는 메서드
+
+
+
     }
 }
