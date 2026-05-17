@@ -36,7 +36,7 @@ public class FinalMain {
         int playerLevel = 18; //외부 입력 값
 
         if(playerLevel + 1 > Constant.MAX_LEVEL) {
-            System.out.println("이미 최대 레벌에 도달했습니다");
+            System.out.println("이미 최대 레벨에 도달했습니다");
         } else {
             playerLevel++;
         }
