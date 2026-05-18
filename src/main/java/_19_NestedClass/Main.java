@@ -1,0 +1,68 @@
+package _19_NestedClass;
+
+import _15_Abstract.Character;
+
+public class Main {
+    public static void main(String[] args) {
+        //중첩 클래스
+        /*
+               1. 메서드 안에서 class 선언 - 지역 클래스
+               - 메서드 안에서만 클래스 역할 가능 (ex) class A {}
+
+               2. 익명 클래스
+               3. 내부 클래스 - 일반 내부(안 쓴다) static 내부(O)
+         */
+
+
+        //익명 클래스 - 추상체(추상 클래스, 인터페이스)
+        // --> 추상체로는 new가 불가능
+
+        //Character를 상속 받는 익명 클래스 정의와 동시에 생성까지
+        //ch는 그럼 Character 객체인가요? (x)
+        //ch는 그냥 익명(이름이 없다) 객체 - Character를 상속 받았다
+        //항상 업캐스팅되어 있음
+        Character ch = new Character("익명", 99, 99) {
+            private String a;
+            private String b;
+            //정의할 수 있다
+            //new Character에 속으면 안 된다
+            @Override
+            public void attack(Character target) {
+                System.out.println("익명 사용자 공격");
+
+            }
+        };
+
+        System.out.println("익명 클래스의 진짜 이름은?");
+        System.out.println(ch.getClass().getName()); //익명
+
+        //추상체는 익명 객체 생성 가능
+        Yes y = new Yes() {
+            @Override
+            public void yes() {
+                System.out.println("네에에에에");
+            }
+        };
+
+        y.yes();
+
+        Reservation r = Reservation.builder() //깡통 빌더 객체 리턴
+                .username("홍길동") //username 초기화된 빌더 객체
+                .date("2026-04-30") // 쭉 상동
+                .personCount(4)
+                .price(89000)
+                .build(); //Reservation 생성자를 내부에서 호출
+
+        LombokUser u = LombokUser.builder()
+                .username("롬복")
+                .password("lombok")
+                .build();
+
+        System.out.println(u.getUsername());
+        u.setPassword("롬복이다!");
+    }
+
+
+
+
+}

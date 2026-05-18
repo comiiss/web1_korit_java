@@ -4,7 +4,7 @@ import java.io.*;
 
 //데이터 베이스 연결(+쿼리)
 //DB 대신 텍스트 파일 이용
-public class UserRepository {
+public class UserRepository implements UserRepo{
     private static UserRepository instance = new UserRepository();
     private UserRepository() {}
     public static UserRepository getInstance() {
@@ -21,6 +21,10 @@ public class UserRepository {
 
     public User[] findAll() throws Exception {
         User[] users = new User[MAX_USER_COUNT];
+
+        //User 객체 여러 개를 반환하고 싶을 때 - User[] findAll()
+
+        //throws Exception 오류 발생할 수 있다
 
         File file = new File(FILE_NAME);
         if(!file.exists()) {
